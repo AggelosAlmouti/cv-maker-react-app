@@ -7,15 +7,26 @@ import EducationForm from "./components/EducationForm";
 import SkillsForm from "./components/SkillsForm";
 
 function App() {
+  const [personal, setPersonal] = useState({
+    fullName: "John Doe",
+    email: "john.doe@email.com",
+    phone: "+31 612******",
+    location: "Amsterdam, NL",
+  });
+
+  const handlePersonalChange = (e) => {
+    setPersonal({ ...personal, [e.target.name]: e.target.value });
+  };
+
   return (
     <>
       <div className="Forms">
-        <PersonalForm></PersonalForm>
+        <PersonalForm data={personal} onChange={handlePersonalChange} />
         <WorkForm></WorkForm>
         <EducationForm></EducationForm>
         <SkillsForm></SkillsForm>
       </div>
-      <CVpreview></CVpreview>
+      <CVpreview data={personal} />
     </>
   );
 }
