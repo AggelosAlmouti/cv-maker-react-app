@@ -1,11 +1,21 @@
 import { useState } from "react";
-import "./css/App.css";
-import Hello from "./components/Hello";
+import "./styles/App.css";
+import CVpreview from "./components/CVpreview";
+import PersonalForm from "./components/PersonalForm";
+import WorkForm from "./components/WorkForm";
+import EducationForm from "./components/EducationForm";
+import SkillsForm from "./components/SkillsForm";
 
 function App() {
   return (
     <>
-      <Hello text="hello" />
+      <div className="Forms">
+        <PersonalForm></PersonalForm>
+        <WorkForm></WorkForm>
+        <EducationForm></EducationForm>
+        <SkillsForm></SkillsForm>
+      </div>
+      <CVpreview></CVpreview>
     </>
   );
 }
