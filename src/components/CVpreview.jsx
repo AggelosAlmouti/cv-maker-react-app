@@ -1,13 +1,16 @@
-import classes from "../styles/CVpreview.module.css";
+import styles from "../styles/CVpreview.module.css";
 
 function CVpreview({ data }) {
   return (
-    <div className="preview">
-      <h2>Preview</h2>
-      <p>Name: {data.fullName}</p>
-      <p>Email: {data.email}</p>
-      <p>Phone: {data.phone}</p>
-      <p>Location: {data.location}</p>
+    <div className={styles.preview}>
+      <header>
+        <h1>{data.fullName}</h1>
+        <aside>
+          <p>{data.email}</p>
+          <p>{data.phone}</p>
+          <p>{data.location}</p>
+        </aside>
+      </header>
     </div>
   );
 }
