@@ -20,7 +20,7 @@ function App() {
 
   return (
     <>
-      <div className="Forms">
+      <div className="forms">
         <PersonalForm data={personal} onChange={handlePersonalChange} />
         <WorkForm></WorkForm>
         <EducationForm></EducationForm>
