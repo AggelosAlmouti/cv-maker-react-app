@@ -16,9 +16,16 @@ function App() {
     // work
     company: "",
     position: "",
-    start: "",
-    end: "",
+    workStart: "",
+    workEnd: "",
     description: "",
+    // Education
+    school: "",
+    degree: "",
+    degreeStart: "",
+    degreeEnd: "",
+    // Skills
+    skill: "",
   });
 
   const handleDataChange = (e) => {
@@ -30,8 +37,8 @@ function App() {
       <div className="forms">
         <PersonalForm data={data} onChange={handleDataChange} />
         <WorkForm data={data} onChange={handleDataChange}></WorkForm>
-        <EducationForm></EducationForm>
-        <SkillsForm></SkillsForm>
+        <EducationForm data={data} onChange={handleDataChange}></EducationForm>
+        <SkillsForm data={data} onChange={handleDataChange}></SkillsForm>
       </div>
       <CVpreview data={data} />
     </>

@@ -30,7 +30,7 @@ function WorkForm({ data, onChange }) {
           id="start"
           type="date"
           name="start"
-          value={data.start}
+          value={data.workStart}
           onChange={onChange}
         />
 
@@ -39,19 +39,18 @@ function WorkForm({ data, onChange }) {
           id="end"
           type="date"
           name="end"
-          value={data.end}
+          value={data.workEnd}
           onChange={onChange}
         />
       </div>
       <div className="group">
-        <label htmlFor="locadescriptiontion">Description</label>
+        <label htmlFor="description">Description</label>
         <textarea
           id="description"
           name="description"
           value={data.description}
           onChange={onChange}
           rows="3"
-          cols="50"
           placeholder="Developed security features for the chrome browser"
         ></textarea>
       </div>

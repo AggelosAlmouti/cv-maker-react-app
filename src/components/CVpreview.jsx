@@ -21,6 +21,19 @@ function CVpreview({ data }) {
           <p>{data.description}</p>
         </aside>
       </section>
+
+      <section className="education">
+        <h3>{data.school}</h3>
+        <aside>
+          <p>{data.degree}</p>
+          <p>{data.degreeStart}</p>
+          <p>{data.degreeEnd}</p>
+        </aside>
+      </section>
+
+      <section className="skills">
+        <p>{data.skill}</p>
+      </section>
     </div>
   );
 }
