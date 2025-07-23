@@ -11,6 +11,16 @@ function CVpreview({ data }) {
           <p>{data.location}</p>
         </aside>
       </header>
+
+      <section className="work">
+        <h3>{data.company}</h3>
+        <aside>
+          <p>{data.position}</p>
+          <p>{data.start}</p>
+          <p>{data.end}</p>
+          <p>{data.description}</p>
+        </aside>
+      </section>
     </div>
   );
 }

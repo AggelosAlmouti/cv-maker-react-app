@@ -7,26 +7,33 @@ import EducationForm from "./components/EducationForm";
 import SkillsForm from "./components/SkillsForm";
 
 function App() {
-  const [personal, setPersonal] = useState({
-    fullName: "John Doe",
-    email: "john.doe@email.com",
-    phone: "+31 612******",
-    location: "Amsterdam, NL",
+  const [data, setData] = useState({
+    // personal
+    fullName: "",
+    email: "",
+    phone: "",
+    location: "",
+    // work
+    company: "",
+    position: "",
+    start: "",
+    end: "",
+    description: "",
   });
 
-  const handlePersonalChange = (e) => {
-    setPersonal({ ...personal, [e.target.name]: e.target.value });
+  const handleDataChange = (e) => {
+    setData({ ...data, [e.target.name]: e.target.value });
   };
 
   return (
     <>
       <div className="forms">
-        <PersonalForm data={personal} onChange={handlePersonalChange} />
-        <WorkForm></WorkForm>
+        <PersonalForm data={data} onChange={handleDataChange} />
+        <WorkForm data={data} onChange={handleDataChange}></WorkForm>
         <EducationForm></EducationForm>
         <SkillsForm></SkillsForm>
       </div>
-      <CVpreview data={personal} />
+      <CVpreview data={data} />
     </>
   );
 }
